@@ -1,0 +1,12 @@
+@ECHO OFF
+:: set batch file script path as default working path
+CD /d %~dp0
+ECHO
+========================================================
+ECHO Installing Everything in current folder...
+
+:: The following command executes all files in folders and subfolders silently in order
+FOR /r "." %%a in (*.exe) do %%~fa" -s
+
+ECHO Complete.
+ECHO Remember to reboot if needed
